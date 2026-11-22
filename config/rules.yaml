@@ -1,0 +1,38 @@
+version: 0.2
+disclaimer: "Все пороги демонстрационные. Требуют калибровки на реальных данных и согласования с методикой."
+
+# Technical phrase checks, not a legal qualification of the document.
+# Each rule matches when one token from every lexeme group appears within a
+# window of tokens, in any order and word form. Lists are demonstration data.
+function_rules:
+  version: "2"
+  disclaimer: "Демонстрационные правила и пороги требуют калибровки. Совпадение — вопрос для проверки контекста специалистом."
+  rules:
+    - id: F02_VAGUE_TERM
+      enabled: true
+      phrase: "в разумный срок"
+      window: 4
+      lexemes:
+        - [разумный, разумная, разумное, разумные, разумного, разумной,
+           разумному, разумным, разумном, разумных, разумными]
+        - [срок, срока, сроку, сроком, сроке,
+           сроки, сроков, срокам, сроками, сроках]
+      min_occurrences: 1
+      exclude_patterns:
+        - 'формулировка\s+«в\s+разумный\s+срок»\s+не\s+применяется'
+      vulnerability: "Вопрос для уточнения: оценочная формулировка срока"
+      control_limitation: "По совпадению слов нельзя установить отсутствие срока или контроля. Нужно проверить другие положения и ссылки."
+      proposed_measure: "Проверить, определены ли срок и порядок его исчисления в полном комплекте документов."
+    - id: F04_CONDITIONAL_ACTION
+      enabled: true
+      phrase: "при необходимости"
+      window: 3
+      lexemes:
+        - [при]
+        - [необходимость, необходимости, необходимостью]
+      min_occurrences: 1
+      exclude_patterns:
+        - 'формулировка\s+«при\s+необходимости»\s+не\s+применяется'
+      vulnerability: "Вопрос для уточнения: условия совершения действия"
+      control_limitation: "По совпадению слов нельзя установить отсутствие критериев. Нужно проверить условия действия в полном контексте."
+      proposed_measure: "Проверить, определены ли условия совершения действия и порядок контроля решения."

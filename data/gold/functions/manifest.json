@@ -1,0 +1,49 @@
+{
+  "version": 2,
+  "synthetic": true,
+  "disclaimer": "Синтетический учебный материал. Сроки и условия вымышлены; это не нормативный акт и не правовая рекомендация.",
+  "documents": [
+    {
+      "filename": "land_v1.docx",
+      "edition": "Учебная редакция 1",
+      "sha256": "d93e1ef762638fc14683c6af4821ec03377c2b289fc0421673a6ac6dffb0b34e",
+      "expected_candidates": 9,
+      "expected_rules": [
+        "F02_VAGUE_TERM",
+        "F04_CONDITIONAL_ACTION"
+      ]
+    },
+    {
+      "filename": "land_v2.docx",
+      "edition": "Учебная редакция 2",
+      "sha256": "d6a5b981f1d5cb005e41038d127d140bc3f5cef0514db58955b54761703952a8",
+      "expected_candidates": 9,
+      "expected_rules": []
+    },
+    {
+      "filename": "land_control.docx",
+      "edition": "Контрольный пример 1",
+      "sha256": "f925883292c5a703d55c0fcd8e6009b9ed9a7e4f0303015d36aa4701b7505e31",
+      "expected_candidates": 9,
+      "expected_rules": []
+    },
+    {
+      "filename": "land_v3.docx",
+      "edition": "Учебная редакция 3",
+      "sha256": "845b955e56e8f63eaaccb552970807bb0c6aae13b73304b7b46fb7971146e41e",
+      "expected_candidates": 9,
+      "expected_rules": [
+        "F02_VAGUE_TERM"
+      ]
+    },
+    {
+      "filename": "land_v4.docx",
+      "edition": "Учебная редакция 4",
+      "sha256": "645b6eba3ad33dcd8ebdec2a0d45b2cee985284a6b2473f5e8c9f63c2618542a",
+      "expected_candidates": 9,
+      "expected_rules": [
+        "F04_CONDITIONAL_ACTION"
+      ]
+    }
+  ]
+}

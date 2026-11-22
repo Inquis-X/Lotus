@@ -1,0 +1,17 @@
+version: 2
+disclaimer: "Демонстрационные шаблоны. Требуют калибровки и проверки на согласованном комплекте документов."
+templates:
+  function: 'Функция\s+\[(?P<key>[A-Za-z0-9_-]+)\]:\s*(?P<title>.+)'
+  procedure: 'Процедура\s+\[(?P<key>[A-Za-z0-9_-]+)\]\s+функции\s+\[(?P<parent>[A-Za-z0-9_-]+)\]:\s*(?P<title>.+)'
+  stage: 'Этап\s+\[(?P<key>[A-Za-z0-9_-]+)\]\s+процедуры\s+\[(?P<parent>[A-Za-z0-9_-]+)\]:\s*(?P<title>.+)'
+  role: 'Роль\s+\[(?P<key>[A-Za-z0-9_-]+)\]\s+этапа\s+\[(?P<parent>[A-Za-z0-9_-]+)\]:\s*(?P<title>.+)'
+  control: 'Контроль\s+\[(?P<key>[A-Za-z0-9_-]+)\]\s+этапа\s+\[(?P<parent>[A-Za-z0-9_-]+)\]:\s*(?P<title>.+)'
+# Paragraph styles used in numbered municipal draft documents.
+clause_styles:
+  "Муниципальная функция": function
+  "Административная процедура": procedure
+  "Этап процедуры": stage
+  "Исполнитель этапа": role
+  "Контроль этапа": control
+clause_pattern: '^(?P<key>[0-9]+(?:\.[0-9]+)*)\.\s+(?P<title>.+)$'
+function_wording: '^(?P<department>.+?) обеспечивает выполнение функции «(?P<title>[^»]+)»\.$'
